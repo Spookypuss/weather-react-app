@@ -1,0 +1,12 @@
+a {
+    color: #ec6e4c;
+    transition: all 0.2 ease-in-out;
+}
+
+a:hover {
+    color:#e63402;
+}
+
+footer {
+    font-family: monospace
+}
