@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedTime from "./FormattedTime";
 import "./Weather.css";
 
 export default function Search() {
@@ -16,6 +17,7 @@ export default function Search() {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      time: new Date(response.data.dt * 1000),
     });
   }
 
@@ -42,6 +44,8 @@ export default function Search() {
       <div>
         {form}
         <h2>{weather.name} current weather</h2>
+        <FormattedTime time={weather.time} />
+        
         <ul>
           <li>Temperature: {Math.round(weather.temperature)}°C</li>
           <li>Wind: {weather.wind}m/s</li>
