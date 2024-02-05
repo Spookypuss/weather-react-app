@@ -13,6 +13,6 @@ export default function FormattedTime(props) {
     }
 
     return (
-        <h3>Last updated: {day}, {hour}:{minutes}</h3>
+        <p>{day}, {hour}:{minutes}</p>
     )
 }

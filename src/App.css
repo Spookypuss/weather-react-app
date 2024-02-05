@@ -1,4 +1,18 @@
 .App {
   font-family: sans-serif;
-  text-align: center;
 }
+
+.App .container {
+  background-color: white;
+  border: 2px solid;
+  box-shadow: 5px 5px 0 #22252e;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+/*background: #fff;
+border: 2px solid #22252e;
+margin: 30px auto 10px;
+max-width: 600px;
+padding: 20px;*/

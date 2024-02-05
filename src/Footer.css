@@ -1,5 +1,5 @@
 a {
-    color: #ec6e4c;
+    color: #716ec6;
     transition: all 0.2 ease-in-out;
 }
 
@@ -8,5 +8,8 @@ a:hover {
 }
 
 footer {
-    font-family: monospace
+    color: #22252e;
+    font-family: monospace;
+    padding: 20px;
+    text-align: center;
 }

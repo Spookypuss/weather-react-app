@@ -1,0 +1,29 @@
+body {
+    color: #22252e;
+}
+
+ul {
+    list-style-type: none;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+  }
+
+.highlight {
+    color: #ec6e4c;
+    font-weight: 600;
+}
+
+.current-icon {
+    font-size: 80px;
+}
+
+.current-temperature {
+    font-size: 80px;
+}
+
+.units {
+    font-size: 16px;
+    position: relative;
+    top: 26px;
+  }
