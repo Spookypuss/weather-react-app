@@ -11,7 +11,7 @@ export default function WeatherInfo(props) {
                     <div className="col-6">
                         <ul>
                             <li><FormattedTime time={props.data.time} /></li>
-                            <li className="current-description">{props.data.description}</li>
+                            <li className="current-description highlight">{props.data.description}</li>
                             <li>Humidity: <span className="highlight">{props.data.humidity}%</span></li>
                             <li>Wind: <span className="highlight">{props.data.wind}m/s</span></li>
                         </ul>
