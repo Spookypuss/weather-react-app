@@ -3,14 +3,13 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
 
-export default function Search() {
-  let [city, setCity] = useState(null);
-  let [loaded, setLoaded] = useState(false);
-  let [weather, setWeather] = useState(null);
+export default function Weather(props) {
+  let [city, setCity] = useState(props.startCity);
+  let [weather, setWeather] = useState({ready: false});
 
-  function showWeather(response) {
-    setLoaded(true);
+  function getWeather(response) {
     setWeather({
+      ready: true,
       name: response.data.name,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
@@ -23,9 +22,13 @@ export default function Search() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    search()
+  }
+
+  function search() {
     let apiKey = "28966f9a5b2543fb60e8a809ec2c1fd9";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(url).then(showWeather);
+    axios.get(url).then(getWeather);
   }
 
   function updateCity(event) {
@@ -39,7 +42,7 @@ export default function Search() {
     </form>
   );
 
-  if (loaded) {
+  if (weather.ready) {
     return (
       <div>
         {form}
@@ -47,6 +50,7 @@ export default function Search() {
       </div>
     );
   } else {
-    return form;
+    search();
+    return("Loading...");
   }
 }
