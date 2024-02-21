@@ -14,17 +14,14 @@ ul {
     font-weight: 600;
 }
 
-.current-icon {
+/*.current-icon {
     font-size: 80px;
-}
+}*/
 
 .current-temperature {
     font-size: 80px;
 }
 
-.units {
-    font-size: 16px;
-    position: relative;
-    top: 26px;
-    margin-left: 5px;
-  }
+.WeatherInfo p {
+    margin: 0;
+}

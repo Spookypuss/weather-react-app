@@ -1,5 +1,7 @@
 import React from "react";
 import FormattedTime from "./FormattedTime";
+import WeatherIcon from "./WeatherIcon";
+import WeatherUnits from "./WeatherUnits";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./WeatherInfo.css";
 
@@ -18,9 +20,10 @@ export default function WeatherInfo(props) {
                     </div>
                     <div className="col-6">
                         <div className="d-flex current-weather">
-                            <div className="current-icon"><img src={props.data.icon} alt={props.data.description} /></div>
-                            <span className="current-temperature">{Math.round(props.data.temperature)}</span>
-                            <span className="units">°C</span>
+                            <div className="current-icon">
+                                <WeatherIcon code={props.data.icon} />
+                            </div>
+                            <WeatherUnits celcius={props.data.temperature} />
                         </div>
                     </div>
                 </div>
