@@ -1,0 +1,24 @@
+.WeatherForecast {
+    text-align: center;
+}
+
+.WeatherForecast canvas {
+    height: 40px;
+    width: 40px;
+    margin: 0 auto;
+}
+
+.WeatherForecast .WeatherForecastDay {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.WeatherForecast .WeatherTemperaturesTemperatureMax {
+    color: #ec6e4c;
+    font-weight: 600;
+}
+
+.WeatherForecast .WeatherTemperaturesTemperatureMin {
+    opacity: 0.6;
+    margin-left: 8px;
+}

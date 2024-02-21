@@ -18,13 +18,15 @@ export default function Weather(props) {
       description: response.data.weather[0].main,
       icon: response.data.weather[0].icon,
       time: new Date(response.data.dt * 1000),
+      longitude: response.data.coord.lon,
+      latitude: response.data.coord.lat,
     });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
     search()
-  }
+  } 
 
   function search() {
     let apiKey = "28966f9a5b2543fb60e8a809ec2c1fd9";
