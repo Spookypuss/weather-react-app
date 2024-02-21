@@ -12,20 +12,24 @@ export default function WeatherForecast(props){
         setLoaded(true);
     }
 
-    if (loaded) {
+    if (loaded) { //due to inability to access free 5 day forecast, the following is calculated from 3-hourly forecast
     return <div className="WeatherForecast">
                 <div className="row">
-                    {forecast.map(function (dailyForecast, index) {
-                        if (index < 5) {
-                        return (
-                            <div className = "col" key={index}>
-                                <WeatherForecastDay data={dailyForecast} />
-                            </div>
-                        );
-                        } else {
-                            return null;
-                        }
-                    })}
+                    <div className="col">
+                        <WeatherForecastDay data={forecast[2]} />
+                    </div>
+                    <div className="col">
+                        <WeatherForecastDay data={forecast[10]} />
+                    </div>
+                    <div className="col">
+                        <WeatherForecastDay data={forecast[18]} />
+                    </div>
+                    <div className="col">
+                        <WeatherForecastDay data={forecast[26]} />
+                    </div>
+                    <div className="col">
+                        <WeatherForecastDay data={forecast[34]} />
+                    </div>
                 </div>
             </div>
     } else {
