@@ -16,19 +16,19 @@ export default function WeatherForecast(props){
     return <div className="WeatherForecast">
                 <div className="row">
                     <div className="col">
-                        <WeatherForecastDay data={forecast[2]} />
+                        <WeatherForecastDay data={forecast[7]} />
                     </div>
                     <div className="col">
-                        <WeatherForecastDay data={forecast[10]} />
+                        <WeatherForecastDay data={forecast[15]} />
                     </div>
                     <div className="col">
-                        <WeatherForecastDay data={forecast[18]} />
+                        <WeatherForecastDay data={forecast[23]} />
                     </div>
                     <div className="col">
-                        <WeatherForecastDay data={forecast[26]} />
+                        <WeatherForecastDay data={forecast[31]} />
                     </div>
                     <div className="col">
-                        <WeatherForecastDay data={forecast[34]} />
+                        <WeatherForecastDay data={forecast[39]} />
                     </div>
                 </div>
             </div>
@@ -43,34 +43,3 @@ export default function WeatherForecast(props){
         return null;
     }
 }
-
-/*import WeatherIcon from "./WeatherIcon";
-import "./WeatherForecast.css";
-import axios from "axios";
-
-export default function WeatherForecast(props) {
-    function handleResponse(response) {
-        console.log(response.data);
-    }
-
-    let apiKey = "28966f9a5b2543fb60e8a809ec2c1fd9";
-    let longitude = props.longitude;
-    let latitude = props.latitude;
-    let url= `api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
-    axios.get(url).then(handleResponse);
-
-    return (
-        <div className="WeatherForecast">
-            <div className="row">
-                <div className="col">
-                    <div className="WeatherForecastDay">Thu</div>
-                    <WeatherIcon code="few-clouds-day" size={36}/>
-                    <div className="WeatherForecastTemperatures">
-                        <span className="WeatherTemperaturesTemperatureMax">19°</span>
-                        <span className="WeatherTemperaturesTemperatureMin">10°</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}*/
