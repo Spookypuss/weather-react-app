@@ -17,6 +17,7 @@ export default function WeatherForecast(props){
     }
 
     if (loaded) { //due to inability to access free 5 day forecast, the following is selected from free 3-hourly live data forecast
+        // hence the lack of variation in max and min temperatures.
     return <div className="WeatherForecast">
                 <div className="row">
                     <div className="col">
